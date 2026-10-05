@@ -1,0 +1,17 @@
+module.exports = (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Headers', '*');
+  res.setHeader('Content-Type', 'application/json');
+
+  res.status(200).json({
+    metas: [
+      {
+        id: 'redecanais_live',
+        type: 'movie',
+        name: 'RedeCanais Ao Vivo',
+        poster: 'https://redecanais.ooo/favicon.ico',
+        description: 'Transmissão do RedeCanais'
+      }
+    ]
+  });
+};
